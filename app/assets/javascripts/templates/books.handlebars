@@ -1,0 +1,14 @@
+<h1>Books</h1>
+
+<ul>
+  {{#each}}
+  <li>
+    {{#link-to 'book' this}}{{title}}{{/link-to}}
+    <button {{action 'delete' this}}>X</button>
+  </li>
+  {{/each}}
+</ul>
+
+{{#link-to 'books.new'}}New Book{{/link-to}}
+
+{{outlet}}
